@@ -1,42 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CRS Recon</title>
   <style>
+    :root {
+      --navy: #1f3d6b;
+      --navy-2: #355f96;
+      --gold: #c8a55a;
+      --bg: #f4f6f8;
+      --text: #1f2937;
+      --muted: #5b6470;
+      --card: #ffffff;
+      --line: #d9dee5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 40px 28px;
       text-align: center;
-      background-color: #f5f7fa;
-      padding: 50px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
     }
+
+    .logo {
+      max-width: 280px;
+      margin: 0 auto 22px;
+      display: block;
+    }
+
     h1 {
-      color: #1e3a5f;
-      font-size: 48px;
+      margin: 0;
+      font-size: 3rem;
+      color: var(--navy);
+      letter-spacing: 0.5px;
     }
-    h2 {
-      color: #3a6ea5;
-      font-weight: normal;
+
+    .subtitle {
+      margin: 14px 0 0;
+      font-size: 1.75rem;
+      color: var(--navy-2);
+      font-weight: 400;
     }
-    p {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 18px;
-      color: #333;
+
+    .intro {
+      max-width: 760px;
+      margin: 28px auto 0;
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 24px;
+      margin-top: 24px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 1.5rem;
+    }
+
+    .section p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 0;
+    }
+
+    .contact-list li {
+      margin: 10px 0;
+      font-size: 1.05rem;
+      color: var(--text);
+    }
+
+    .contact-list a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .contact-list a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 26px;
+      padding-bottom: 10px;
+    }
+
+    .accent-line {
+      width: 90px;
+      height: 4px;
+      background: var(--gold);
+      border-radius: 999px;
+      margin: 18px auto 0;
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 2.25rem;
+      }
+
+      .subtitle {
+        font-size: 1.35rem;
+      }
+
+      .intro,
+      .section p,
+      .contact-list li {
+        font-size: 1rem;
+      }
+
+      .hero,
+      .section {
+        padding: 24px 18px;
+      }
+
+      .logo {
+        max-width: 220px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <section class="hero">
+      <!-- Replace logo.png with your actual uploaded logo filename later -->
+      <img src="logo.png" alt="CRS Recon Logo" class="logo" />
+      <h1>CRS Recon</h1>
+      <p class="subtitle">Casualty Reconstruction Systems</p>
+      <div class="accent-line"></div>
+      <p class="intro">
+        CRS Recon develops practical reconstruction tools and visualization systems
+        for marine and transportation incident analysis. Our focus is clear, hands-on
+        understanding of real-world scenarios through modular modeling, structured
+        layouts, and professional presentation.
+      </p>
+    </section>
 
-  <h1>CRS Recon</h1>
-  <h2>Casualty Reconstruction Systems</h2>
+    <section class="section">
+      <h2>About CRS Recon</h2>
+      <p>
+        CRS Recon is focused on building clear, physical, and visual tools that help
+        communicate sequence, configuration, movement, and incident context. The goal
+        is straightforward: make reconstruction easier to understand, explain, and refine.
+      </p>
+    </section>
 
-  <p>
-    We design physical reconstruction tools and training systems for marine and transportation incident analysis.
-  </p>
+    <section class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:jimdfayard@icloud.com">jimdfayard@icloud.com</a></li>
+        <li>Website: <a href="https://crsrecon.net">crsrecon.net</a></li>
+      </ul>
+    </section>
 
-  <p>
-    CRS Recon focuses on hands-on visualization, modular modeling, and innovative investigation methods to better understand real-world scenarios.
-  </p>
-
+    <div class="footer">
+      © 2026 CRS Recon. All rights reserved.
+    </div>
+  </div>
 </body>
 </html>
